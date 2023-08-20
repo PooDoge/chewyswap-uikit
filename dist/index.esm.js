@@ -1765,7 +1765,7 @@ var Modal = function (_a) {
 };
 var templateObject_1$u, templateObject_2$9, templateObject_3$5;
 
-var Overlay = styled.div.attrs({ role: "presentation" })(templateObject_1$v || (templateObject_1$v = __makeTemplateObject(["\n  &:before {\n    background-attachment: fixed;\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0,0,0,0.5);  \n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0,0,0,0.5);  \n    transition: opacity 1s;\n  }\n  &:before {\n    background: inherit;\n    transition: opacity 1s;\n  }\n  transition: opacity 1s;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  backdrop-filter: blur(20px);\n  -webkit-backdrop-filter: blur(20px);\n  background: inherit;\n  background-color: rgba(0,0,0,0.6);  \n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"], ["\n  &:before {\n    background-attachment: fixed;\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0,0,0,0.5);  \n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0,0,0,0.5);  \n    transition: opacity 1s;\n  }\n  &:before {\n    background: inherit;\n    transition: opacity 1s;\n  }\n  transition: opacity 1s;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  backdrop-filter: blur(20px);\n  -webkit-backdrop-filter: blur(20px);\n  background: inherit;\n  background-color: rgba(0,0,0,0.6);  \n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"])), function (_a) {
+var Overlay = styled.div.attrs({ role: "presentation" })(templateObject_1$v || (templateObject_1$v = __makeTemplateObject(["\n  &:before {\n    background-attachment: fixed;\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0, 0, 0, 0.5);\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0, 0, 0, 0.5);\n    transition: opacity 1s;\n  }\n  &:before {\n    background: inherit;\n    transition: opacity 1s;\n  }\n  transition: opacity 1s;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  backdrop-filter: blur(20px);\n  -webkit-backdrop-filter: blur(20px);\n  background: inherit;\n  background-color: rgba(0, 0, 0, 0.6);\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"], ["\n  &:before {\n    background-attachment: fixed;\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0, 0, 0, 0.5);\n    transition: opacity 1s;\n  }\n  &:before {\n    background-color: rgba(0, 0, 0, 0.5);\n    transition: opacity 1s;\n  }\n  &:before {\n    background: inherit;\n    transition: opacity 1s;\n  }\n  transition: opacity 1s;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  backdrop-filter: blur(20px);\n  -webkit-backdrop-filter: blur(20px);\n  background: inherit;\n  background-color: rgba(0, 0, 0, 0.6);\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"])), function (_a) {
     var show = _a.show;
     return (show ? 0.9 : 0);
 }, function (_a) {
@@ -2097,7 +2097,7 @@ var Logo$1 = function (_a) {
         React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     return (React.createElement(Flex, null,
         React.createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$L, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$K, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Dogeshrek home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Dogeshrek home page" }, innerLogo))));
+        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Chewyswap home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Chewyswap home page" }, innerLogo))));
 };
 var templateObject_1$y;
 
@@ -2113,11 +2113,11 @@ var links = [
         items: [
             {
                 label: "Exchange",
-                href: "https://dogeshrek.com",
+                href: "https://chewyswap.dog",
             },
             {
                 label: "Liquidity",
-                href: "https://dogeshrek.com/#/pool",
+                href: "https://chewyswap.dog/#/pool",
             },
         ],
     },
@@ -2179,20 +2179,6 @@ var links = [
         ],
     },
     {
-        label: "IFO",
-        icon: "IfoIcon",
-        items: [
-            {
-                label: "Next",
-                href: "/ifo",
-            },
-            {
-                label: "History",
-                href: "/ifo/history",
-            },
-        ],
-    },
-    {
         label: "More",
         icon: "MoreIcon",
         items: [
@@ -2202,15 +2188,11 @@ var links = [
             // },
             {
                 label: "Github",
-                href: "https://github.com/goosedefi/",
+                href: "https://github.com/PooDoge",
             },
             {
                 label: "Docs",
-                href: "https://goosedefi.gitbook.io/goose-finance/",
-            },
-            {
-                label: "Blog",
-                href: "https://goosefinance.medium.com/",
+                href: "https://docs.chewyswap.dog",
             },
         ],
     },
@@ -2222,18 +2204,18 @@ var socials = [
         items: [
             {
                 label: "Announcements",
-                href: "https://t.me/dogeshrek",
+                href: "https://t.me/chewyswap",
             },
             {
                 label: "Community Chat",
-                href: "https://t.me/dogeshrekchat",
+                href: "https://t.me/ChewySwapCommunity",
             },
         ],
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/dogeshrek",
+        href: "https://twitter.com/pooshibofficial",
     },
 ];
 var MENU_HEIGHT = 64;
@@ -2810,9 +2792,9 @@ var templateObject_1$K;
 
 var baseColors = {
     failure: "#ed4b71",
-    primary: "#4de439",
+    primary: "#ff8400",
     primaryBright: "#146c09",
-    primaryDark: "#55ff3e",
+    primaryDark: "#fe840a",
     secondary: "#7645D9",
     success: "#31D0AA",
     warning: "#FFB237",
@@ -2823,7 +2805,7 @@ var brandColors = {
 var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#f8f8f8", backgroundDisabled: "#a8a8a8", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", tertiary: "#EFF4F5", text: "#452A7A", textDisabled: "#BDC2C4", textSubtle: "#8f80ba", borderColor: "#E9EAEB", card: "#FFFFFF", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#9A6AFF", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#1f1f1f", primaryDark: "#0098A1", tertiary: "#353547", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#9A6AFF", background: "#353231", backgroundDisabled: "#423737", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#1f1f1f", primaryDark: "#0098A1", tertiary: "#353547", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });
 
@@ -2838,24 +2820,24 @@ var _a$2, _b;
 var PRIMARY = variants.PRIMARY, SECONDARY = variants.SECONDARY, TERTIARY = variants.TERTIARY, TEXT = variants.TEXT, DANGER = variants.DANGER, SUBTLE = variants.SUBTLE, SUCCESS = variants.SUCCESS;
 var light$1 = (_a$2 = {},
     _a$2[PRIMARY] = {
-        background: "#4de439",
-        backgroundActive: "#24d20d",
-        backgroundHover: "#52fa3b",
+        background: "#ff8000",
+        backgroundActive: "#ff8000",
+        backgroundHover: "#ffaf60",
         border: 0,
         borderColorHover: "currentColor",
-        boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-        boxShadowActive: "inset 0px -1px 0px rgba(14, 14, 44, 0.4)",
-        color: "#000000",
+        boxShadow: "inset 0px -1px 0px rgba(14, 14, 44, 0.8)",
+        boxShadowActive: "inset 0px -1px 0px rgba(0, 0, 0, 0.8)",
+        color: "#242424",
     },
     _a$2[SECONDARY] = {
         background: "transparent",
         backgroundActive: "transparent",
         backgroundHover: "transparent",
-        border: "2px solid #52fa3b",
-        borderColorHover: "#83fe73",
+        border: "2px solid #ff8000",
+        borderColorHover: "#ffaf60",
         boxShadow: "none",
         boxShadowActive: "none",
-        color: "#259b15",
+        color: "#bd5e00",
     },
     _a$2[TERTIARY] = {
         background: lightColors.tertiary,
@@ -2910,7 +2892,7 @@ var light$1 = (_a$2 = {},
     _a$2);
 var dark$1 = (_b = {},
     _b[PRIMARY] = __assign({}, light$1.primary),
-    _b[SECONDARY] = __assign(__assign({}, light$1.secondary), { color: "#4fff37" }),
+    _b[SECONDARY] = __assign(__assign({}, light$1.secondary), { color: "#ff9429" }),
     _b[TERTIARY] = __assign(__assign({}, light$1.tertiary), { background: darkColors.tertiary, backgroundActive: darkColors.tertiary, backgroundHover: darkColors.tertiary, color: darkColors.primary }),
     _b[TEXT] = __assign(__assign({}, light$1.text), { backgroundHover: darkColors.tertiary }),
     _b[DANGER] = __assign({}, light$1.danger),

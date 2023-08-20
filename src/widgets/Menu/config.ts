@@ -10,11 +10,11 @@ export const links = [
     items: [
       {
         label: "Exchange",
-        href: "https://dogeshrek.com",
+        href: "https://chewyswap.dog",
       },
       {
         label: "Liquidity",
-        href: "https://dogeshrek.com/#/pool",
+        href: "https://chewyswap.dog/#/pool",
       },
     ],
   },
@@ -76,20 +76,6 @@ export const links = [
     ],
   },
   {
-    label: "IFO",
-    icon: "IfoIcon",
-    items: [
-      {
-        label: "Next",
-        href: "/ifo",
-      },
-      {
-        label: "History",
-        href: "/ifo/history",
-      },
-    ],
-  },
-  {
     label: "More",
     icon: "MoreIcon",
     items: [
@@ -99,15 +85,11 @@ export const links = [
       // },
       {
         label: "Github",
-        href: "https://github.com/goosedefi/",
+        href: "https://github.com/PooDoge",
       },
       {
         label: "Docs",
-        href: "https://goosedefi.gitbook.io/goose-finance/",
-      },
-      {
-        label: "Blog",
-        href: "https://goosefinance.medium.com/",
+        href: "https://docs.chewyswap.dog",
       },
     ],
   },
@@ -120,18 +102,18 @@ export const socials = [
     items: [
       {
         label: "Announcements",
-        href: "https://t.me/dogeshrek",
+        href: "https://t.me/chewyswap",
       },
       {
         label: "Community Chat",
-        href: "https://t.me/dogeshrekchat",
+        href: "https://t.me/ChewySwapCommunity",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/dogeshrek",
+    href: "https://twitter.com/pooshibofficial",
   },
   //{
   //  label: "Reddit",
