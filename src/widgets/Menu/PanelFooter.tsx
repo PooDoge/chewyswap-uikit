@@ -33,7 +33,7 @@ const PriceLink = styled.a`
   }
   :hover {
     svg {
-      transform: scale(1.2);
+      transform: scale(1.2) rotate(5deg);
     }
   }
 `;
@@ -121,26 +121,7 @@ const PanelFooter: React.FC<Props> = ({
             <MoonIcon color={isDark ? "text" : "textDisabled"} width="24px" />
           </Flex>
         </Button>
-        <Dropdown
-          position="top-right"
-          target={
-            <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-              <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-            </Button>
-          }
-        >
-          {langs.map((lang) => (
-            <MenuButton
-              key={lang.code}
-              fullWidth
-              onClick={() => setLang(lang)}
-              // Safari fix
-              style={{ minHeight: "32px", height: "auto" }}
-            >
-              {lang.language}
-            </MenuButton>
-          ))}
-        </Dropdown>
+
       </SettingsEntry>
     </Container>
   );
