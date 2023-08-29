@@ -9,11 +9,11 @@ type InactiveButtonProps = {
 } & ButtonMenuItemProps;
 
 const InactiveButton = styled(Button)<InactiveButtonProps>`
-  background-color: transparent;
+  
   color: ${({ theme, colorKey }) => theme.colors[colorKey]};
 
   &:hover:not(:disabled):not(:active) {
-    background-color: transparent;
+    background-color: #ffa006;
   }
 `;
 
@@ -29,8 +29,7 @@ const ButtonMenuItem: React.FC<ButtonMenuItemProps> = ({
       <InactiveButton
         forwardedAs={as}
         size={size}
-        variant="tertiary"
-        squared
+        variant="text"
         colorKey={variant === variants.PRIMARY ? "primary" : "textSubtle"}
         {...props}
       />
