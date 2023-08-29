@@ -161,7 +161,7 @@ var getButtonVariantProp = function (prop) { return function (_a) {
 }; };
 var StyledButton = styled.button(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    background-color: ", ";\n    border-color: ", ";\n    border-radius: ", ";\n  }\n\n  &:focus:not(:active) {\n    box-shadow: 0 0 0 2px ", ";\n  }\n\n  &:active {\n    background-color: ", ";\n    box-shadow: ", ";\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    background-color: ", ";\n    border-color: ", ";\n    border-radius: ", ";\n  }\n\n  &:focus:not(:active) {\n    box-shadow: 0 0 0 2px ", ";\n  }\n\n  &:active {\n    background-color: ", ";\n    box-shadow: ", ";\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp("background"), getButtonVariantProp("border"), function (_a) {
     var squared = _a.squared;
-    return (squared ? "0px" : "16px");
+    return (squared ? "5px" : "16px");
 }, getButtonVariantProp("boxShadow"), getButtonVariantProp("color"), function (_a) {
     var fullWidth = _a.fullWidth;
     return (fullWidth ? "100%" : "max-content");
@@ -631,7 +631,7 @@ var getBackgroundColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
     return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
 };
-var StyledButtonMenu = styled.div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 0px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 0px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"])), getBackgroundColor);
+var StyledButtonMenu = styled.div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 5px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"])), getBackgroundColor);
 var templateObject_1$7;
 
 var ButtonMenu = function (_a) {
@@ -646,14 +646,14 @@ var ButtonMenu = function (_a) {
     })));
 };
 
-var InactiveButton = styled(Button)(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  background-color: transparent;\n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"], ["\n  background-color: transparent;\n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"])), function (_a) {
+var InactiveButton = styled(Button)(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  \n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: #ffa006;\n  }\n"], ["\n  \n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: #ffa006;\n  }\n"])), function (_a) {
     var theme = _a.theme, colorKey = _a.colorKey;
     return theme.colors[colorKey];
 });
 var ButtonMenuItem = function (_a) {
     var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? sizes.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants.PRIMARY : _d, as = _a.as, props = __rest(_a, ["isActive", "size", "variant", "as"]);
     if (!isActive) {
-        return (React.createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "tertiary", squared: true, colorKey: variant === variants.PRIMARY ? "primary" : "textSubtle" }, props)));
+        return (React.createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "text", colorKey: variant === variants.PRIMARY ? "primary" : "textSubtle" }, props)));
     }
     return React.createElement(Button, __assign({ as: as, size: size, variant: variant, squared: true }, props));
 };
@@ -2559,7 +2559,7 @@ var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React.createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React.createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
-        React.createElement(Flex, { mb: "32px" },
+        React.createElement(Flex, { mb: "32px", justifyContent: "center" },
             React.createElement(LinkExternal, { small: true, href: "https://shibariumscan.io/address/" + account, mr: "16px" }, "View on ShibariumScan"),
             React.createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React.createElement(Flex, { justifyContent: "center" },
@@ -2575,6 +2575,24 @@ var useWalletModal = function (login, logout, account) {
     var onPresentConnectModal = useModal(React.createElement(ConnectModal, { login: login }))[0];
     var onPresentAccountModal = useModal(React.createElement(AccountModal, { account: account || "", logout: logout }))[0];
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
+};
+
+var NetworkModal = function (_a) {
+    var chain = _a.chain, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
+    return (React.createElement(Modal, { title: "Current Network", onDismiss: onDismiss },
+        React.createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, chain),
+        React.createElement(Flex, { mt: "24px", mb: "32px", justifyContent: "center" },
+            React.createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-shibarium", mr: "16px" }, "How to Add Shibarium"),
+            React.createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-dogechain", mr: "16px" }, "How to Add Dogechain")),
+        React.createElement(Flex, { justifyContent: "center" },
+            React.createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
+                    onDismiss();
+                } }, "Dismiss"))));
+};
+
+var useNetworkModal = function (chain) {
+    var onPresentNetworkModal = useModal(React.createElement(NetworkModal, { chain: chain || "Wrong Network" }))[0];
+    return { onPresentNetworkModal: onPresentNetworkModal };
 };
 
 var UserBlock = function (_a) {
@@ -2608,20 +2626,25 @@ var Pip = styled.div(templateObject_2$e || (templateObject_2$e = __makeTemplateO
     var theme = _a.theme;
     return theme.colors.failure;
 });
+function chainText(chain) {
+    var returnText = 'Woof! Wen Shibarium? Wen Dogechain? Wrong Network!';
+    if (chain === 'Dogechain') {
+        returnText = 'Woof! Connected to Dogechain Network';
+    }
+    else if (chain === 'Shibarium') {
+        returnText = 'Woof! Connected to Shibarium Network';
+    }
+    return returnText;
+}
 var Avatar = function (_a) {
     var profile = _a.profile;
-    var _b = profile.username, username = _b === void 0 ? "Bunny" : _b, image = profile.image, profileLink = profile.profileLink, noProfileLink = profile.noProfileLink, _c = profile.showPip, showPip = _c === void 0 ? false : _c;
-    var link = profile.username ? profileLink : noProfileLink;
-    var isExternal = link.startsWith("http");
-    var ariaLabel = "Link to profile";
+    var _b = profile.username, username = _b === void 0 ? "Network Doggy" : _b, image = profile.image, _c = profile.showPip, showPip = _c === void 0 ? false : _c, chain = profile.chain;
+    var onPresentNetworkModal = useNetworkModal(chainText(chain)).onPresentNetworkModal;
     var icon = image ? (React.createElement("img", { src: image, alt: "profile avatar", height: "32px", width: "32px" })) : (React.createElement(Icon$1c, { width: "32px", height: "32px" }));
-    if (isExternal) {
-        return (React.createElement(StyledAvatar, { title: username },
-            React.createElement("a", { href: link, "aria-label": ariaLabel }, icon),
-            showPip && React.createElement(Pip, null)));
-    }
-    return (React.createElement(StyledAvatar, { title: username },
-        React.createElement(Link$1, { to: link, "aria-label": ariaLabel }, icon),
+    return (React.createElement(StyledAvatar, { title: username, onClick: function () {
+            onPresentNetworkModal();
+        } },
+        icon,
         showPip && React.createElement(Pip, null)));
 };
 var templateObject_1$G, templateObject_2$e;
@@ -2949,4 +2972,4 @@ var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark, button
 
 var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light, button: light$1, colors: lightColors, card: light$2, toggle: light$4, nav: light$5, modal: light$6, radio: light$3 });
 
-export { Icon$4 as AddIcon, Alert, Icon$5 as ArrowBackIcon, Icon$6 as ArrowDownIcon, Icon$7 as ArrowDropDownIcon, Icon$8 as ArrowDropUpIcon, Icon$9 as ArrowForwardIcon, Icon$a as AutoRenewIcon, BackgroundImage, GridLayout as BaseLayout, Icon$b as BinanceIcon, Icon$2 as BlockIcon, Breadcrumbs, Icon$c as BunnyPlaceholderIcon, Button, ButtonMenu, ButtonMenuItem, Icon$e as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$d as CardViewIcon, GridLayout$1 as CardsLayout, Checkbox, Icon as CheckmarkCircleIcon, Icon$f as CheckmarkIcon, Icon$g as ChevronDownIcon, Icon$h as ChevronLeftIcon, Icon$i as ChevronRightIcon, Icon$j as ChevronUpIcon, Icon$k as CloseIcon, Icon$l as CogIcon, Icon$m as CommunityIcon, Icon$n as CopyIcon, CopyToClipboard, Dropdown, Icon$1 as ErrorIcon, Flex, Icon$w as GooseRoundIcon, Heading, Icon$o as HelpIcon, IconButton, Image, Icon$3 as InfoIcon, Input, Link, LinkExternal, Icon$p as ListViewIcon, Icon$q as LogoIcon, Icon$r as LogoRoundIcon, Menu, Icon$s as MinusIcon, Modal, ModalProvider, Icon$t as OpenNewIcon, Icon$v as PancakeRoundIcon, Icon$u as PancakesIcon, Icon$x as PrizeIcon, Progress, Icon$A as ProgressBunny, Radio, Icon$y as RemoveIcon, ResetCSS, Icon$E as SearchIcon, Skeleton, Spinner, Svg, Icon$F as SwapVertIcon, Icon$G as SyncAltIcon, Tag, Text, Icon$C as Ticket, Icon$D as TicketRound, ToastContainer, Toggle, Icon$z as VerifiedIcon, Icon$H as WarningIcon, Icon$B as Won, variants$1 as alertVariants, byTextAscending, byTextDescending, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, types as toastTypes, useMatchBreakpoints, useModal, useParticleBurst, useTable, useWalletModal };
+export { Icon$4 as AddIcon, Alert, Icon$5 as ArrowBackIcon, Icon$6 as ArrowDownIcon, Icon$7 as ArrowDropDownIcon, Icon$8 as ArrowDropUpIcon, Icon$9 as ArrowForwardIcon, Icon$a as AutoRenewIcon, BackgroundImage, GridLayout as BaseLayout, Icon$b as BinanceIcon, Icon$2 as BlockIcon, Breadcrumbs, Icon$c as BunnyPlaceholderIcon, Button, ButtonMenu, ButtonMenuItem, Icon$e as CalculateIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$d as CardViewIcon, GridLayout$1 as CardsLayout, Checkbox, Icon as CheckmarkCircleIcon, Icon$f as CheckmarkIcon, Icon$g as ChevronDownIcon, Icon$h as ChevronLeftIcon, Icon$i as ChevronRightIcon, Icon$j as ChevronUpIcon, Icon$k as CloseIcon, Icon$l as CogIcon, Icon$m as CommunityIcon, Icon$n as CopyIcon, CopyToClipboard, Dropdown, Icon$1 as ErrorIcon, Flex, Icon$w as GooseRoundIcon, Heading, Icon$o as HelpIcon, IconButton, Image, Icon$3 as InfoIcon, Input, Link, LinkExternal, Icon$p as ListViewIcon, Icon$q as LogoIcon, Icon$r as LogoRoundIcon, Menu, Icon$s as MinusIcon, Modal, ModalProvider, Icon$t as OpenNewIcon, Icon$v as PancakeRoundIcon, Icon$u as PancakesIcon, Icon$x as PrizeIcon, Progress, Icon$A as ProgressBunny, Radio, Icon$y as RemoveIcon, ResetCSS, Icon$E as SearchIcon, Skeleton, Spinner, Svg, Icon$F as SwapVertIcon, Icon$G as SyncAltIcon, Tag, Text, Icon$C as Ticket, Icon$D as TicketRound, ToastContainer, Toggle, Icon$z as VerifiedIcon, Icon$H as WarningIcon, Icon$B as Won, variants$1 as alertVariants, byTextAscending, byTextDescending, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, types as toastTypes, useMatchBreakpoints, useModal, useNetworkModal, useParticleBurst, useTable, useWalletModal };

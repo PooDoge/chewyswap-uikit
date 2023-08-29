@@ -174,7 +174,7 @@ var getButtonVariantProp = function (prop) { return function (_a) {
 }; };
 var StyledButton = styled__default['default'].button(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    background-color: ", ";\n    border-color: ", ";\n    border-radius: ", ";\n  }\n\n  &:focus:not(:active) {\n    box-shadow: 0 0 0 2px ", ";\n  }\n\n  &:active {\n    background-color: ", ";\n    box-shadow: ", ";\n  }\n\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n  color: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  /* max-content instead of auto for Safari fix */\n  width: ", ";\n  height: ", ";\n  line-height: 1;\n  letter-spacing: 0.03em;\n  justify-content: center;\n  outline: 0;\n  padding: ", ";\n  transition: background-color 0.2s;\n  opacity: ", ";\n\n  &:hover:not(:disabled):not(.button--disabled):not(:active) {\n    background-color: ", ";\n    border-color: ", ";\n    border-radius: ", ";\n  }\n\n  &:focus:not(:active) {\n    box-shadow: 0 0 0 2px ", ";\n  }\n\n  &:active {\n    background-color: ", ";\n    box-shadow: ", ";\n  }\n\n  ", "\n  ", "\n  ", "\n"])), getButtonVariantProp("background"), getButtonVariantProp("border"), function (_a) {
     var squared = _a.squared;
-    return (squared ? "0px" : "16px");
+    return (squared ? "5px" : "16px");
 }, getButtonVariantProp("boxShadow"), getButtonVariantProp("color"), function (_a) {
     var fullWidth = _a.fullWidth;
     return (fullWidth ? "100%" : "max-content");
@@ -644,7 +644,7 @@ var getBackgroundColor = function (_a) {
     var theme = _a.theme, variant = _a.variant;
     return theme.colors[variant === variants.SUBTLE ? "input" : "tertiary"];
 };
-var StyledButtonMenu = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 0px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 0px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"])), getBackgroundColor);
+var StyledButtonMenu = styled__default['default'].div(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 5px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 5px;\n  display: inline-flex;\n\n  & > button + button,\n  & > a + a {\n    margin-left: 2px; // To avoid focus shadow overlap\n  }\n"])), getBackgroundColor);
 var templateObject_1$7;
 
 var ButtonMenu = function (_a) {
@@ -659,14 +659,14 @@ var ButtonMenu = function (_a) {
     })));
 };
 
-var InactiveButton = styled__default['default'](Button)(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  background-color: transparent;\n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"], ["\n  background-color: transparent;\n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: transparent;\n  }\n"])), function (_a) {
+var InactiveButton = styled__default['default'](Button)(templateObject_1$8 || (templateObject_1$8 = __makeTemplateObject(["\n  \n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: #ffa006;\n  }\n"], ["\n  \n  color: ", ";\n\n  &:hover:not(:disabled):not(:active) {\n    background-color: #ffa006;\n  }\n"])), function (_a) {
     var theme = _a.theme, colorKey = _a.colorKey;
     return theme.colors[colorKey];
 });
 var ButtonMenuItem = function (_a) {
     var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.size, size = _c === void 0 ? sizes.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants.PRIMARY : _d, as = _a.as, props = __rest(_a, ["isActive", "size", "variant", "as"]);
     if (!isActive) {
-        return (React__default['default'].createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "tertiary", squared: true, colorKey: variant === variants.PRIMARY ? "primary" : "textSubtle" }, props)));
+        return (React__default['default'].createElement(InactiveButton, __assign({ forwardedAs: as, size: size, variant: "text", colorKey: variant === variants.PRIMARY ? "primary" : "textSubtle" }, props)));
     }
     return React__default['default'].createElement(Button, __assign({ as: as, size: size, variant: variant, squared: true }, props));
 };
@@ -2572,7 +2572,7 @@ var AccountModal = function (_a) {
     var account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React__default['default'].createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
-        React__default['default'].createElement(Flex, { mb: "32px" },
+        React__default['default'].createElement(Flex, { mb: "32px", justifyContent: "center" },
             React__default['default'].createElement(LinkExternal, { small: true, href: "https://shibariumscan.io/address/" + account, mr: "16px" }, "View on ShibariumScan"),
             React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex, { justifyContent: "center" },
@@ -2588,6 +2588,24 @@ var useWalletModal = function (login, logout, account) {
     var onPresentConnectModal = useModal(React__default['default'].createElement(ConnectModal, { login: login }))[0];
     var onPresentAccountModal = useModal(React__default['default'].createElement(AccountModal, { account: account || "", logout: logout }))[0];
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
+};
+
+var NetworkModal = function (_a) {
+    var chain = _a.chain, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
+    return (React__default['default'].createElement(Modal, { title: "Current Network", onDismiss: onDismiss },
+        React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, chain),
+        React__default['default'].createElement(Flex, { mt: "24px", mb: "32px", justifyContent: "center" },
+            React__default['default'].createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-shibarium", mr: "16px" }, "How to Add Shibarium"),
+            React__default['default'].createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-dogechain", mr: "16px" }, "How to Add Dogechain")),
+        React__default['default'].createElement(Flex, { justifyContent: "center" },
+            React__default['default'].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
+                    onDismiss();
+                } }, "Dismiss"))));
+};
+
+var useNetworkModal = function (chain) {
+    var onPresentNetworkModal = useModal(React__default['default'].createElement(NetworkModal, { chain: chain || "Wrong Network" }))[0];
+    return { onPresentNetworkModal: onPresentNetworkModal };
 };
 
 var UserBlock = function (_a) {
@@ -2621,20 +2639,25 @@ var Pip = styled__default['default'].div(templateObject_2$e || (templateObject_2
     var theme = _a.theme;
     return theme.colors.failure;
 });
+function chainText(chain) {
+    var returnText = 'Woof! Wen Shibarium? Wen Dogechain? Wrong Network!';
+    if (chain === 'Dogechain') {
+        returnText = 'Woof! Connected to Dogechain Network';
+    }
+    else if (chain === 'Shibarium') {
+        returnText = 'Woof! Connected to Shibarium Network';
+    }
+    return returnText;
+}
 var Avatar = function (_a) {
     var profile = _a.profile;
-    var _b = profile.username, username = _b === void 0 ? "Bunny" : _b, image = profile.image, profileLink = profile.profileLink, noProfileLink = profile.noProfileLink, _c = profile.showPip, showPip = _c === void 0 ? false : _c;
-    var link = profile.username ? profileLink : noProfileLink;
-    var isExternal = link.startsWith("http");
-    var ariaLabel = "Link to profile";
+    var _b = profile.username, username = _b === void 0 ? "Network Doggy" : _b, image = profile.image, _c = profile.showPip, showPip = _c === void 0 ? false : _c, chain = profile.chain;
+    var onPresentNetworkModal = useNetworkModal(chainText(chain)).onPresentNetworkModal;
     var icon = image ? (React__default['default'].createElement("img", { src: image, alt: "profile avatar", height: "32px", width: "32px" })) : (React__default['default'].createElement(Icon$1c, { width: "32px", height: "32px" }));
-    if (isExternal) {
-        return (React__default['default'].createElement(StyledAvatar, { title: username },
-            React__default['default'].createElement("a", { href: link, "aria-label": ariaLabel }, icon),
-            showPip && React__default['default'].createElement(Pip, null)));
-    }
-    return (React__default['default'].createElement(StyledAvatar, { title: username },
-        React__default['default'].createElement(reactRouterDom.Link, { to: link, "aria-label": ariaLabel }, icon),
+    return (React__default['default'].createElement(StyledAvatar, { title: username, onClick: function () {
+            onPresentNetworkModal();
+        } },
+        icon,
         showPip && React__default['default'].createElement(Pip, null)));
 };
 var templateObject_1$G, templateObject_2$e;
@@ -3054,6 +3077,7 @@ exports.menuConfig = links;
 exports.toastTypes = types;
 exports.useMatchBreakpoints = useMatchBreakpoints;
 exports.useModal = useModal;
+exports.useNetworkModal = useNetworkModal;
 exports.useParticleBurst = useParticleBurst;
 exports.useTable = useTable;
 exports.useWalletModal = useWalletModal;

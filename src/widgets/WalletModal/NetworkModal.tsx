@@ -4,45 +4,42 @@ import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
 import Flex from "../../components/Flex/Flex";
 import { Modal } from "../Modal";
-import CopyToClipboard from "./CopyToClipboard";
-import { localStorageKey } from "./config";
 
 interface Props {
-  account: string;
-  logout: () => void;
+  chain: string;
   onDismiss?: () => void;
 }
 
-const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
-  <Modal title="Your wallet" onDismiss={onDismiss}>
+
+const NetworkModal: React.FC<Props> = ({ chain, onDismiss = () => null }) => (
+  <Modal title="Current Network" onDismiss={onDismiss}>
     <Text
       fontSize="20px"
       bold
       style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
     >
-      {account}
+      {chain}
     </Text>
-    <Flex mb="32px" justifyContent="center">
-      <LinkExternal small href={`https://shibariumscan.io/address/${account}`} mr="16px">
-        View on ShibariumScan
+    <Flex mt="24px" mb="32px" justifyContent="center">
+      <LinkExternal small href="https://docs.chewyswap.com/connect-to-shibarium" mr="16px">
+        How to Add Shibarium
       </LinkExternal>
-      <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
+      <LinkExternal small href="https://docs.chewyswap.com/connect-to-dogechain" mr="16px">
+        How to Add Dogechain
+      </LinkExternal>
     </Flex>
     <Flex justifyContent="center">
       <Button
         size="sm"
         variant="secondary"
         onClick={() => {
-          logout();
-          window.localStorage.removeItem(localStorageKey);
           onDismiss();
-          window.location.reload();
         }}
       >
-        Logout
+        Dismiss
       </Button>
     </Flex>
   </Modal>
 );
 
-export default AccountModal;
+export default NetworkModal;
