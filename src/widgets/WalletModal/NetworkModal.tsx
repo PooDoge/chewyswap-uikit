@@ -16,7 +16,7 @@ const NetworkModal: React.FC<Props> = ({ chain, onDismiss = () => null }) => (
     <Text
       fontSize="20px"
       bold
-      style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
+      style={{ marginBottom: "8px" }}
     >
       {chain}
     </Text>

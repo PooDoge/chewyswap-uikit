@@ -2580,7 +2580,7 @@ var useWalletModal = function (login, logout, account) {
 var NetworkModal = function (_a) {
     var chain = _a.chain, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     return (React.createElement(Modal, { title: "Current Network", onDismiss: onDismiss },
-        React.createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, chain),
+        React.createElement(Text, { fontSize: "20px", bold: true, style: { marginBottom: "8px" } }, chain),
         React.createElement(Flex, { mt: "24px", mb: "32px", justifyContent: "center" },
             React.createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-shibarium", mr: "16px" }, "How to Add Shibarium"),
             React.createElement(LinkExternal, { small: true, href: "https://docs.chewyswap.com/connect-to-dogechain", mr: "16px" }, "How to Add Dogechain")),
