@@ -113,7 +113,7 @@ export const socials = [
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/pooshibofficial",
+    href: "https://twitter.com/chewyswap",
   },
   // {
   //  label: "Reddit",
