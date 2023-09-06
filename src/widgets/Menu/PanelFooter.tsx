@@ -54,8 +54,10 @@ const SocialEntry = styled.div`
   padding: 0 16px;
 `;
 
-const Invisible = styled(Skeleton)`
+const Invisible = styled.div`
   opacity: 0;
+  min-height: 24px;
+  min-width: 80px;
 `
 
 const PanelFooter: React.FC<Props> = ({
@@ -88,7 +90,7 @@ const PanelFooter: React.FC<Props> = ({
             <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
           </PriceLink>
         ) : (
-          <Invisible width={80} height={24} />
+          <Invisible><span /></Invisible>
         )}
         <Flex>
           {socials.map((social, index) => {

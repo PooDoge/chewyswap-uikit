@@ -2331,7 +2331,7 @@ var Container$4 = styled.div(templateObject_1$C || (templateObject_1$C = __makeT
 var PriceLink = styled.a(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2) rotate(5deg);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2) rotate(5deg);\n    }\n  }\n"])));
 var SettingsEntry = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 8px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
-var Invisible = styled(Skeleton)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  opacity: 0;\n"], ["\n  opacity: 0;\n"])));
+var Invisible = styled.div(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  opacity: 0;\n  min-height: 24px;\n  min-width: 80px;\n"], ["\n  opacity: 0;\n  min-height: 24px;\n  min-width: 80px;\n"])));
 var PanelFooter = function (_a) {
     var isPushed = _a.isPushed, pushNav = _a.pushNav, toggleTheme = _a.toggleTheme, isDark = _a.isDark, cakePriceUsd = _a.cakePriceUsd; _a.currentLang; _a.langs; _a.setLang; var priceLink = _a.priceLink;
     if (!isPushed) {
@@ -2343,7 +2343,8 @@ var PanelFooter = function (_a) {
         React.createElement(SocialEntry, null,
             cakePriceUsd ? (React.createElement(PriceLink, { href: priceLink, target: "_blank" },
                 React.createElement(Icon$v, { width: "24px", mr: "8px" }),
-                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Invisible, { width: 80, height: 24 })),
+                React.createElement(Text, { color: "textSubtle", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Invisible, null,
+                React.createElement("span", null))),
             React.createElement(Flex, null, socials.map(function (social, index) {
                 var Icon = Icons$1[social.icon];
                 var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
