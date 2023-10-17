@@ -102,18 +102,18 @@ export const socials = [
     items: [
       {
         label: "Announcements",
-        href: "https://T.me/Brick_by_brick_shib",
+        href: "https://t.me/chewyswap",
       },
       {
         label: "Community Chat",
-        href: "https://T.me/Brick_by_brick_shib",
+        href: "https://t.me/ChewySwapCommunity",
       },
     ],
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/Brick_on_Shib",
+    href: "https://twitter.com/chewyswap",
   },
   // {
   //  label: "Reddit",

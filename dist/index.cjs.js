@@ -2110,7 +2110,7 @@ var Logo$1 = function (_a) {
         React__default['default'].createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     return (React__default['default'].createElement(Flex, null,
         React__default['default'].createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React__default['default'].createElement(Icon$L, { width: "24px", color: "textSubtle" })) : (React__default['default'].createElement(Icon$K, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React__default['default'].createElement(StyledLink$1, { as: "a", href: href, "aria-label": "BrickSwap home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink$1, { to: href, "aria-label": "BrickSwap home page" }, innerLogo))));
+        isAbsoluteUrl ? (React__default['default'].createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Chewyswap home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink$1, { to: href, "aria-label": "Chewyswap home page" }, innerLogo))));
 };
 var templateObject_1$y;
 
@@ -2217,18 +2217,18 @@ var socials = [
         items: [
             {
                 label: "Announcements",
-                href: "https://T.me/Brick_by_brick_shib",
+                href: "https://t.me/chewyswap",
             },
             {
                 label: "Community Chat",
-                href: "https://T.me/Brick_by_brick_shib",
+                href: "https://t.me/ChewySwapCommunity",
             },
         ],
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/Brick_on_Shib",
+        href: "https://twitter.com/chewyswap",
     },
 ];
 var MENU_HEIGHT = 64;
