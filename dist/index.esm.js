@@ -2097,7 +2097,7 @@ var Logo$1 = function (_a) {
         React.createElement(Logo, { className: "desktop-icon", isDark: isDark })));
     return (React.createElement(Flex, null,
         React.createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$L, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$K, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Chewyswap home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "Chewyswap home page" }, innerLogo))));
+        isAbsoluteUrl ? (React.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "BrickSwap home page" }, innerLogo)) : (React.createElement(StyledLink$1, { to: href, "aria-label": "BrickSwap home page" }, innerLogo))));
 };
 var templateObject_1$y;
 
@@ -2204,18 +2204,18 @@ var socials = [
         items: [
             {
                 label: "Announcements",
-                href: "https://t.me/chewyswap",
+                href: "https://T.me/Brick_by_brick_shib",
             },
             {
                 label: "Community Chat",
-                href: "https://t.me/ChewySwapCommunity",
+                href: "https://T.me/Brick_by_brick_shib",
             },
         ],
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/chewyswap",
+        href: "https://twitter.com/Brick_on_Shib",
     },
 ];
 var MENU_HEIGHT = 64;

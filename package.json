@@ -1,14 +1,14 @@
 {
   "name": "@pancakeswap-libs/uikit",
   "version": "0.10.4",
-  "description": "Set of UI components for chewyswap projects",
+  "description": "Set of UI components for BrickSwap projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/poodoge/chewyswap-uikit",
+  "repository": "https://github.com/poodoge/bswap-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
